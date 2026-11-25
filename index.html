@@ -20,7 +20,7 @@
 :root{
   --H:100vh; --u:calc(var(--H) * .005625);           /* 1u = 1% of stage width (stage is 9:16) */
   --ivory:#fbf4ea; --paper:#f6eadb; --blush:#f3d9d0; --blush-d:#e7bfb6;
-  --rose:#b5566e; --rose-d:#8a3650; --gold:#b98a3e; --gold-l:#e3c489; --ink:#5d3b40;
+  --rose:#8b1a2b; --rose-d:#5c0a16; --gold:#b98a3e; --gold-l:#e3c489; --ink:#4a1c22;
 }
 @supports (height:100svh){:root{--H:100svh}}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -30,7 +30,7 @@ body{font-family:'Tiro Devanagari Hindi',serif;color:var(--ink);background:#e9d3
 body.locked{overflow:hidden;height:var(--H)}
 
 /* ================= STAGE (envelope + scene) ================= */
-.view{position:relative;height:var(--H);width:min(100vw,calc(var(--u)*100));margin:0 auto;overflow:hidden;
+.view{touch-action:pan-y;position:relative;height:var(--H);width:min(100vw,calc(var(--u)*100));margin:0 auto;overflow:hidden;
   background:radial-gradient(ellipse at 50% 40%,#fbeee4,#eccfc3 70%,#dcb5a9);cursor:pointer;
   -webkit-tap-highlight-color:transparent;user-select:none}
 .stage{position:absolute;top:0;left:50%;height:100%;width:calc(var(--u)*100);margin-left:calc(var(--u)*-50);
@@ -100,24 +100,24 @@ body.locked{overflow:hidden;height:var(--H)}
 .slide.on>*:nth-child(4){transition-delay:.75s}.slide.on>*:nth-child(5){transition-delay:1s}
 .slide.on>*:nth-child(6){transition-delay:1.25s}.slide.on>*:nth-child(7){transition-delay:1.5s}
 .slide.on>*:nth-child(8){transition-delay:1.75s}.slide.on>*:nth-child(9){transition-delay:2s}
-.slide{color:#7d2944}
+.slide{color:#5c0a16}
 .t-om{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*3.5);letter-spacing:.05em;color:#a0742a;line-height:1.5}
-.t-sm{font-size:calc(var(--u)*3.05);line-height:1.42;color:#5e2f3d}
-.t-name{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*8.6);line-height:1.28;color:#7d2944;white-space:nowrap}
+.t-sm{font-size:calc(var(--u)*3.05);line-height:1.42;color:#4a1c22}
+.t-name{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*8.6);line-height:1.28;color:#5c0a16;white-space:nowrap}
 .t-name small{font-family:'Tiro Devanagari Hindi';font-size:.38em;color:#a0742a;vertical-align:middle;margin-right:.25em}
 .t-sang{font-family:'Kalam';font-weight:700;font-size:calc(var(--u)*4.4);line-height:1.1;color:#a0742a}
-.t-em{font-family:'Noto Serif Devanagari';font-weight:400;color:#a8456a;font-size:1.15em}
+.t-em{font-family:'Noto Serif Devanagari';font-weight:400;color:#8b1a2b;font-size:1.15em}
 .t-rule{display:flex;align-items:center;gap:.7em;font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*4.2);letter-spacing:.1em;line-height:1.5}
 .t-rule::before,.t-rule::after{content:"";width:calc(var(--u)*10);height:1px;background:currentColor;opacity:.6}
-.t-yr{font-size:calc(var(--u)*3.6);letter-spacing:.22em;line-height:1.3;color:#5e2f3d}
-.t-day{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*13);line-height:1.3;margin-top:-.08em;color:#a8456a}
+.t-yr{font-size:calc(var(--u)*3.6);letter-spacing:.22em;line-height:1.3;color:#4a1c22}
+.t-day{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*13);line-height:1.3;margin-top:-.08em;color:#8b1a2b}
 .t-mon{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*4.8);letter-spacing:.1em;line-height:1.45}
 .t-lbl{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*3.6);color:#a0742a;margin-top:.45em;letter-spacing:.06em;line-height:1.5}
 .t-venue{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*6);line-height:1.35;white-space:nowrap}
-.t-title{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*5.6);line-height:1.4;color:#7d2944}
-.t-ev b{display:block;font-family:'Noto Serif Devanagari';font-weight:400;font-size:calc(var(--u)*3.7);color:#a8456a;line-height:1.45}
-.t-ev{font-size:calc(var(--u)*3.05);line-height:1.42;margin-top:.5em;color:#5e2f3d}
-.t-verse{font-family:'Kalam';font-size:calc(var(--u)*3.9);line-height:1.6;color:#7d2944;margin-top:.3em}
+.t-title{font-family:'Noto Serif Devanagari';font-size:calc(var(--u)*5.6);line-height:1.4;color:#5c0a16}
+.t-ev b{display:block;font-family:'Noto Serif Devanagari';font-weight:400;font-size:calc(var(--u)*3.7);color:#8b1a2b;line-height:1.45}
+.t-ev{font-size:calc(var(--u)*3.05);line-height:1.42;margin-top:.5em;color:#4a1c22}
+.t-verse{font-family:'Kalam';font-size:calc(var(--u)*3.9);line-height:1.6;color:#5c0a16;margin-top:.3em}
 .t-by{font-family:'Kalam';font-weight:700;font-size:calc(var(--u)*3.6);color:#a0742a;margin-top:.5em}
 
 .dots{position:absolute;z-index:7;left:0;right:0;bottom:calc(var(--u)*10.5);display:flex;justify-content:center;gap:8px;
@@ -128,7 +128,12 @@ body.locked{overflow:hidden;height:var(--H)}
   font-size:calc(var(--u)*3.2);color:#fff;text-shadow:0 1px 6px rgba(80,30,30,.8);white-space:nowrap;text-decoration:none}
 .down b{display:inline-block;font-weight:400;animation:bob2 1.5s ease-in-out infinite}
 @keyframes bob2{50%{transform:translateY(5px)}}
-.s5 .dots,.s5 .down{opacity:1}
+.swipe{position:absolute;z-index:7;left:0;right:0;bottom:calc(var(--u)*15);text-align:center;opacity:0;transition:opacity 1s;
+  font-size:calc(var(--u)*3);color:#fff;text-shadow:0 1px 6px rgba(80,20,20,.85);pointer-events:none;letter-spacing:.04em}
+.swipe b{display:inline-block;font-weight:400;animation:nudge 1.4s ease-in-out infinite}
+.swipe b:first-child{animation-direction:reverse}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.s5 .dots,.s5 .down,.s5 .swipe{opacity:1}
 
 /* petals */
 #petals{position:absolute;inset:0;z-index:6;pointer-events:none;overflow:hidden}
@@ -183,17 +188,17 @@ h2{font-family:'Noto Serif Devanagari';font-weight:400;font-size:30px;color:var(
 .ev ul{list-style:none;margin-top:8px;display:flex;flex-wrap:wrap;gap:7px}
 .ev li{font-size:14.5px;padding:3px 12px;border-radius:999px;background:rgba(243,217,208,.6);border:1px solid var(--blush-d)}
 .ev .where{margin-top:10px;font-size:13.5px;opacity:.85}
-.ev.main{background:linear-gradient(160deg,#a84a66,#7c2f48);color:#fff6ee;border-color:var(--gold-l)}
+.ev.main{background:linear-gradient(160deg,#7d1626,#45060f);color:#fff6ee;border-color:var(--gold-l)}
 .ev.main .d{color:#ffe9c9}.ev.main .d small{color:#f6d9d0}.ev.main .tithi{color:var(--gold-l)}
 .ev.main li{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
-.ev.main li.big{font-family:'Noto Serif Devanagari';font-size:18px;background:linear-gradient(180deg,#fff3d6,var(--gold-l));color:#6b2a3f;border:none;padding:4px 16px}
+.ev.main li.big{font-family:'Noto Serif Devanagari';font-size:18px;background:linear-gradient(180deg,#fff3d6,var(--gold-l));color:#5c0a16;border:none;padding:4px 16px}
 
 .venue{max-width:430px;margin:0 auto 18px;padding:22px 18px;border-radius:18px;border:1px solid var(--gold-l);background:rgba(255,250,243,.75)}
 .venue .lbl{display:inline-block;font-family:'Noto Serif Devanagari';font-size:13px;letter-spacing:.5px;color:#fff;background:var(--rose);padding:2px 14px;border-radius:999px}
 .venue h3{font-family:'Noto Serif Devanagari';font-weight:400;font-size:26px;color:var(--rose-d);margin-top:10px;line-height:1.35}
 .venue p{font-size:15px}
 .btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;text-decoration:none;font-family:'Noto Serif Devanagari';font-size:15px;
-  padding:9px 20px;border-radius:999px;color:#fff;background:linear-gradient(180deg,#c06a82,var(--rose-d));box-shadow:0 6px 16px rgba(140,60,80,.3)}
+  padding:9px 20px;border-radius:999px;color:#fff;background:linear-gradient(180deg,#8b1a2b,var(--rose-d));box-shadow:0 6px 16px rgba(140,60,80,.3)}
 .btn.ghost{background:transparent;color:var(--rose-d);border:1.5px solid var(--rose);box-shadow:none}
 .btn.wa{background:linear-gradient(180deg,#3ddc73,#128c4a)}
 .btn svg{width:17px;height:17px;fill:currentColor}
@@ -272,6 +277,7 @@ footer p{font-size:14.5px;margin-top:4px;text-shadow:0 1px 8px rgba(60,20,30,.9)
         </div>
       </div>
 
+      <div class="swipe"><b>‹</b>&nbsp; स्वाइप करें &nbsp;<b>›</b></div>
       <div class="dots" id="dots"><i></i><i></i><i></i><i></i></div>
       <a class="down" href="#details" id="down">पूरा निमंत्रण देखें <b>⌄</b></a>
     </div>
@@ -453,7 +459,14 @@ function openEnvelope(){
   setTimeout(()=>{stage.classList.add('s5');step=2;document.body.classList.remove('locked');
     show(0);setInterval(petal,900);observe()},5200);
 }
+let tx=0,ty=0,swiped=0;
+view.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+view.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
+  if(step===2&&Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.3){swiped=Date.now();show(cur+(dx<0?1:-1))}
+},{passive:true});
 view.addEventListener('click',e=>{
+  if(Date.now()-swiped<500)return;
   if(e.target.closest('#down'))return;
   if(step===0)openEnvelope();else if(step===2)show(cur+1);
 });
